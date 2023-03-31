@@ -12,7 +12,7 @@ cache = {}
 
 @robot.text
 def hello_world(msg):
-    lschat = msg.content.split(":")
+    lschat = msg.content.split('：',1)
     if lschat[0] == "我想咨询"：
         logger.info('[WX_Public] receive public msg: {}, userId: {}'.format(msg.content, msg.source))
         key = msg.content + '|' + msg.source
