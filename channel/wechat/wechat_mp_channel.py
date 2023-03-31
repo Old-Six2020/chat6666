@@ -15,7 +15,7 @@ def hello_world(msg):
     lschat = msg.content.split('：',1)
     if lschat[0] == "我想咨询"：
         logger.info('[WX_Public] receive public msg: {}, userId: {}'.format(msg.content, msg.source))
-        key = msg.content + '|' + msg.source
+        key = "你将作为中国律师，为我解决法律问题。\n"+msg.content + '|' + msg.source
         if cache.get(key):
             # request time
             cache.get(key)['req_times'] += 1
